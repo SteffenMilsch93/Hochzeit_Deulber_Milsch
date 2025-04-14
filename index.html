@@ -6,19 +6,21 @@
   <title>Unsere Hochzeit</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
 </head>
 <body>
 
   <header class="hero" style="background-image: url('img/DSC05140.jpg');">
     <div class="overlay"></div>
     <div class="hero-content">
-      <h1>Ein Tag. Für Immer.</h1>
-      <p>Willkommen zu unserer Hochzeit</p>
+      <h1>18. Oktober 2025</h1>
+      <p>Ein Tag. Für Immer.</p>
+      <div id="countdown"></div>
     </div>
   </header>
 
   <section class="galerie">
-    <h2>Unsere Momente</h2>
+    <h2>Unsere schönsten Momente</h2>
     <div class="swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><img src="img/DSC05140.jpg" alt="Foto 1"/></div><div class="swiper-slide"><img src="img/DSC05296.jpg" alt="Foto 2"/></div><div class="swiper-slide"><img src="img/DSC05206.jpg" alt="Foto 3"/></div><div class="swiper-slide"><img src="img/IMG_4306.JPG" alt="Foto 4"/></div><div class="swiper-slide"><img src="img/DSC05145.jpg" alt="Foto 5"/></div><div class="swiper-slide"><img src="img/DSC05138.jpg" alt="Foto 6"/></div>
@@ -29,6 +31,25 @@
     </div>
   </section>
 
+  <section class="maps">
+    <h2>Location</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2653.4327270920345!2d10.9521275!3d48.3380277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e99cbd4c8df49%3A0xf8c2b782ecde05c8!2sGut%20Schwabhof!5e0!3m2!1sde!2sde!4v1681763524426!5m2!1sde!2sde"
+      width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+
+  <section class="anmeldung">
+    <h2>Sei dabei!</h2>
+    <p>Melde dich über unser Formular an:</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSePLACEHOLDER/viewform" target="_blank" class="btn">Zur Anmeldung</a>
+  </section>
+
+  <section class="qr">
+    <h2>Website teilen</h2>
+    <p>Scanne diesen Code und komm direkt zur Seite:</p>
+    <canvas id="qrcode"></canvas>
+  </section>
+
   <footer>
     <p>&copy; 2025 – Hochzeit von Janine & Steffen</p>
   </footer>
@@ -37,14 +58,29 @@
   <script>
     const swiper = new Swiper('.swiper', {
       loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-      },
+      pagination: { el: '.swiper-pagination' },
       navigation: {
         nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        prevEl: '.swiper-button-prev'
       },
     });
+
+    // Countdown
+    const countDownDate = new Date("Oct 18, 2025 12:00:00").getTime();
+    const countdownEl = document.getElementById("countdown");
+
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      countdownEl.innerHTML = days + " Tage " + hours + " Std " + minutes + " Min " + seconds + " Sek";
+    }, 1000);
+
+    // QR-Code generieren
+    QRCode.toCanvas(document.getElementById("qrcode"), window.location.href);
   </script>
 </body>
 </html>
