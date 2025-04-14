@@ -1,47 +1,50 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Die große Feier</title>
+  <title>Unsere Hochzeit</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 </head>
 <body>
 
-  <header class="hero">
+  <header class="hero" style="background-image: url('img/DSC05140.jpg');">
     <div class="overlay"></div>
     <div class="hero-content">
       <h1>Ein Tag. Für Immer.</h1>
-      <p>Sei Teil von etwas Besonderem.</p>
-      <a href="#anmeldung" class="btn">Jetzt anmelden</a>
+      <p>Willkommen zu unserer Hochzeit</p>
     </div>
   </header>
 
-  <section class="intro">
-    <h2>Die Feier</h2>
-    <p>Wir feiern das Leben, die Liebe – und laden dich ein, dabei zu sein. Die Details folgen, aber eins ist sicher: es wird unvergesslich.</p>
-  </section>
-
-  <section id="anmeldung" class="anmeldung">
-    <h2>Melde dich an</h2>
-    <form id="rsvp-form">
-      <input type="text" name="name" placeholder="Dein Name" required />
-      <input type="email" name="email" placeholder="E-Mail-Adresse" required />
-      <button type="submit">Teilnehmen</button>
-    </form>
-    <div id="confirmation" class="hidden">Danke für deine Anmeldung!</div>
-    <div class="qr-code">
-      <h3>Oder scanne diesen QR-Code:</h3>
-      <canvas id="qrcode"></canvas>
+  <section class="galerie">
+    <h2>Unsere Momente</h2>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img/DSC05140.jpg" alt="Foto 1"/></div><div class="swiper-slide"><img src="img/DSC05296.jpg" alt="Foto 2"/></div><div class="swiper-slide"><img src="img/DSC05206.jpg" alt="Foto 3"/></div><div class="swiper-slide"><img src="img/IMG_4306.JPG" alt="Foto 4"/></div><div class="swiper-slide"><img src="img/DSC05145.jpg" alt="Foto 5"/></div><div class="swiper-slide"><img src="img/DSC05138.jpg" alt="Foto 6"/></div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 – Die große Feier</p>
+    <p>&copy; 2025 – Hochzeit von Janine & Steffen</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
-  <script src="script.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
 </body>
 </html>
