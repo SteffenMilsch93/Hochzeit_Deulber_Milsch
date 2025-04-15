@@ -93,3 +93,54 @@ footer {
   font-size: 0.9rem;
   color: #777;
 }
+.keyfacts {
+  padding: 4rem 2rem;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.keyfacts h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.fact-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.fact-card:hover {
+  transform: translateY(-5px);
+}
+
+.fact-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.fact-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.fact-card a {
+  color: #007aff;
+  text-decoration: none;
+}
+
+.fact-card a:hover {
+  text-decoration: underline;
+}
