@@ -1,4 +1,4 @@
-
+/* === RESET & BASIS === */
 * {
   margin: 0;
   padding: 0;
@@ -8,10 +8,12 @@
 
 body {
   background: #fff;
-  color: #111;
+  color: #1c1c1e;
   line-height: 1.6;
+  font-size: 16px;
 }
 
+/* === HERO === */
 .hero {
   height: 100vh;
   background-size: cover;
@@ -28,34 +30,52 @@ body {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .hero-content {
   z-index: 2;
   color: #fff;
+  padding: 1rem;
 }
 
 .hero h1 {
   font-size: 3rem;
+  font-weight: 600;
   margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
 }
 
 .hero p {
   font-size: 1.2rem;
+  font-weight: 400;
   margin-bottom: 1rem;
+  opacity: 0.9;
 }
 
 #countdown {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
+/* === SECTIONS === */
 .galerie, .maps, .anmeldung, .qr {
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
   text-align: center;
 }
 
+.galerie h2,
+.maps h2,
+.anmeldung h2,
+.qr h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #1c1c1e;
+}
+
+/* === SWIPER === */
 .swiper {
   width: 90%;
   max-width: 900px;
@@ -64,76 +84,101 @@ body {
 
 .swiper-slide img {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.05);
 }
 
+/* === IFRAME === */
 iframe {
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  width: 100%;
+  height: 400px;
 }
 
+/* === BUTTON === */
 .btn {
   display: inline-block;
   padding: 1rem 2rem;
   background: #000;
   color: #fff;
   text-decoration: none;
-  border-radius: 25px;
-  margin-top: 1rem;
-  transition: background 0.3s;
+  border-radius: 30px;
+  margin-top: 1.5rem;
+  font-weight: 500;
+  transition: background 0.3s ease;
 }
 
 .btn:hover {
   background: #333;
 }
 
+/* === FOOTER === */
 footer {
   padding: 2rem;
   text-align: center;
   font-size: 0.9rem;
-  color: #777;
+  color: #8e8e93;
 }
+
+/* === KEYFACTS – APPLE STYLE === */
 .keyfacts {
-  padding: 4rem 2rem;
-  background: #f9f9f9;
+  padding: 6rem 2rem;
+  background-color: #fafafa;
+}
+
+.keyfacts-container {
+  max-width: 1200px;
+  margin: 0 auto;
   text-align: center;
 }
 
 .keyfacts h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #333;
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  color: #1c1c1e;
 }
 
 .facts-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
 }
 
 .fact-card {
-  background: white;
-  padding: 2rem;
+  background: #fff;
   border-radius: 2rem;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
+  padding: 2.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .fact-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.fact-card img {
+  height: 32px;
+  margin-bottom: 1.2rem;
+  opacity: 0.7;
 }
 
 .fact-card h3 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #1c1c1e;
   margin-bottom: 0.5rem;
 }
 
 .fact-card p {
   font-size: 1rem;
   color: #555;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .fact-card a {
