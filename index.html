@@ -7,17 +7,18 @@
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- Swiper + QR -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
   <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
 
-  <!-- Custom Tailwind Config -->
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: {
-            sans: ['Helvetica Neue', 'sans-serif'],
-          },
           colors: {
             gold: '#C7A86E',
           }
@@ -31,15 +32,15 @@
   <!-- Hero Section -->
   <header class="relative h-screen bg-center bg-cover flex items-center justify-center" style="background-image: url('img/DSC05140.jpg');">
     <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-    <div class="relative text-center text-white">
+    <div class="relative text-center text-white" data-aos="fade-up">
       <h1 class="text-4xl md:text-6xl font-bold mb-4">18. Oktober 2025</h1>
       <p class="text-xl md:text-2xl mb-6 italic">Ein Tag. Für Immer.</p>
-      <div id="countdown" class="text-lg md:text-xl font-medium"></div>
+      <div id="countdown" class="text-lg md:text-xl font-medium animate-fade-in"></div>
     </div>
   </header>
 
   <!-- Galerie -->
-  <section class="py-16 px-4 text-center">
+  <section class="py-16 px-4 text-center" data-aos="fade-up">
     <h2 class="text-3xl md:text-4xl font-semibold mb-10">Unsere schönsten Momente</h2>
     <div class="swiper w-full max-w-5xl mx-auto">
       <div class="swiper-wrapper">
@@ -57,16 +58,16 @@
   </section>
 
   <!-- Trauzeugen -->
-  <section class="py-16 bg-gray-50 text-center">
+  <section class="py-16 bg-gray-50 text-center" data-aos="fade-up">
     <h2 class="text-3xl font-semibold mb-10">Unsere Trauzeugen</h2>
     <div class="flex flex-wrap justify-center gap-10 px-4">
-      <div class="w-64">
+      <div class="w-64" data-aos="zoom-in">
         <div class="overflow-hidden rounded-2xl shadow-lg">
           <img src="img/DSC060501.jpg" alt="Trauzeuge" class="hover:scale-105 transition duration-300 ease-in-out w-full h-80 object-cover">
         </div>
         <p class="mt-3 text-lg font-medium">Trauzeuge</p>
       </div>
-      <div class="w-64">
+      <div class="w-64" data-aos="zoom-in" data-aos-delay="150">
         <div class="overflow-hidden rounded-2xl shadow-lg">
           <img src="img/DSC060161.jpg" alt="Trauzeugin" class="hover:scale-105 transition duration-300 ease-in-out w-full h-80 object-cover">
         </div>
@@ -76,30 +77,30 @@
   </section>
 
   <!-- Keyfacts -->
-  <section class="py-16 px-6 text-center">
+  <section class="py-16 px-6 text-center" data-aos="fade-up">
     <h2 class="text-3xl font-semibold mb-10">Keyfacts</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      <div class="bg-white rounded-xl shadow-lg p-6">
+      <div class="bg-white rounded-xl shadow-lg p-6" data-aos="flip-left">
         <h3 class="text-xl font-semibold mb-2">📍 Ort</h3>
         <p>Gut Schwabhof, 86482 Aystetten</p>
       </div>
-      <div class="bg-white rounded-xl shadow-lg p-6">
+      <div class="bg-white rounded-xl shadow-lg p-6" data-aos="flip-left" data-aos-delay="100">
         <h3 class="text-xl font-semibold mb-2">📅 Datum</h3>
         <p>Samstag, 18. Oktober 2025</p>
       </div>
-      <div class="bg-white rounded-xl shadow-lg p-6">
+      <div class="bg-white rounded-xl shadow-lg p-6" data-aos="flip-left" data-aos-delay="200">
         <h3 class="text-xl font-semibold mb-2">⏰ Uhrzeit</h3>
         <p>Sektempfang um 13:00 Uhr<br>Trauung um 14:00 Uhr</p>
       </div>
-      <div class="bg-white rounded-xl shadow-lg p-6">
+      <div class="bg-white rounded-xl shadow-lg p-6" data-aos="flip-left" data-aos-delay="300">
         <h3 class="text-xl font-semibold mb-2">👗 Dresscode</h3>
         <p>So elegant wie es nur geht.<br><strong>Mehr ist mehr :)</strong></p>
       </div>
-      <div class="bg-white rounded-xl shadow-lg p-6">
+      <div class="bg-white rounded-xl shadow-lg p-6" data-aos="flip-left" data-aos-delay="400">
         <h3 class="text-xl font-semibold mb-2">🛏️ Übernachtung</h3>
         <p><a href="https://www.sankt-afra.eu/hotel.html" target="_blank" class="text-gold underline">Brauereigasthof Sankt Afra</a></p>
       </div>
-      <div class="bg-white rounded-xl shadow-lg p-6">
+      <div class="bg-white rounded-xl shadow-lg p-6" data-aos="flip-left" data-aos-delay="500">
         <h3 class="text-xl font-semibold mb-2">🎁 Geschenke</h3>
         <p>Flach ist super – wir haben nicht viel Platz im Auto zurück nach Köln!</p>
       </div>
@@ -107,20 +108,20 @@
   </section>
 
   <!-- Map -->
-  <section class="py-16 px-4 text-center">
+  <section class="py-16 px-4 text-center" data-aos="fade-up">
     <h2 class="text-3xl font-semibold mb-8">Location</h2>
     <iframe class="w-full max-w-5xl mx-auto h-96 rounded-xl shadow-md" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2653.4327270920345!2d10.9521275!3d48.3380277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e99cbd4c8df49%3A0xf8c2b782ecde05c8!2sGut%20Schwabhof!5e0!3m2!1sde!2sde!4v1681763524426!5m2!1sde!2sde" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </section>
 
   <!-- Anmeldung -->
-  <section class="py-16 text-center bg-gray-100">
+  <section class="py-16 text-center bg-gray-100" data-aos="fade-up">
     <h2 class="text-3xl font-semibold mb-4">Sei dabei!</h2>
     <p class="mb-6 text-lg">Melde dich über unser Formular an:</p>
     <a href="https://docs.google.com/forms/d/1TUKurnfDUjPn0r8H08fiVXlaWz20VTuArid9OtGup60/edit" target="_blank" class="bg-gold hover:bg-yellow-600 text-white px-6 py-3 rounded-full shadow-lg transition">Zur Anmeldung</a>
   </section>
 
   <!-- QR-Code -->
-  <section class="py-16 text-center">
+  <section class="py-16 text-center" data-aos="zoom-in">
     <h2 class="text-3xl font-semibold mb-4">Website teilen</h2>
     <p class="mb-6 text-lg">Scanne diesen Code und komm direkt zur Seite:</p>
     <canvas id="qrcode" class="mx-auto"></canvas>
@@ -131,9 +132,15 @@
     <p>&copy; 2025 – Hochzeit von Janine & Steffen</p>
   </footer>
 
-  <!-- Swiper + Scripts -->
+  <!-- Scripts -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
     const swiper = new Swiper('.swiper', {
       loop: true,
       pagination: { el: '.swiper-pagination' },
@@ -158,6 +165,5 @@
 
     QRCode.toCanvas(document.getElementById("qrcode"), window.location.href);
   </script>
-
 </body>
 </html>
